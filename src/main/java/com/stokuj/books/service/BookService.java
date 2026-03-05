@@ -48,6 +48,7 @@ public class BookService {
         book.setYear(request.getYear());
         book.setIsbn(request.getIsbn());
         book.setDescription(request.getDescription());
+        book.setContent(request.getContent());
         book.setPageCount(request.getPageCount());
         book.setGenres(request.getGenres());
         book.setTags(request.getTags());

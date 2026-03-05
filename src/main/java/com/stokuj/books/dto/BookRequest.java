@@ -21,6 +21,8 @@ public class BookRequest {
     @Size(max = 2000, message = "Opis nie może przekraczać 2000 znaków")
     private String description;
 
+    private String content;
+
     @Min(value = 1, message = "Liczba stron musi być większa niż 0")
     private int pageCount;
 
@@ -42,6 +44,9 @@ public class BookRequest {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public String getContent() { return content; }
+    public void setContent(String content) { this.content = content; }
 
     public int getPageCount() { return pageCount; }
     public void setPageCount(int pageCount) { this.pageCount = pageCount; }

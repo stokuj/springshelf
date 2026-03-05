@@ -1,5 +1,6 @@
 package com.stokuj.books.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,6 +18,9 @@ public class Book {
     private int year;
     private String isbn;
     private String description;
+    @Column(columnDefinition = "TEXT")
+    @JsonIgnore
+    private String content;
     private int pageCount;
 
     // === KATEGORYZACJA ===
@@ -66,6 +70,9 @@ public class Book {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public String getContent() { return content; }
+    public void setContent(String content) { this.content = content; }
 
     public int getPageCount() { return pageCount; }
     public void setPageCount(int pageCount) { this.pageCount = pageCount; }
